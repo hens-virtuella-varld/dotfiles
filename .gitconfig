@@ -1,0 +1,59 @@
+[alias]
+	a = add
+	c = commit
+	ci = commit -m
+	co = checkout
+	d = diff
+	dc = diff --cached
+	l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cgreen\\ [%cn]" --decorate --date=short
+	p = push
+	pl = pull
+	root = rev-parse --show-toplevel
+	s = status -s
+	st = status
+	n = commit -F /Users/nanoha/nanoha
+[color]
+	ui = true
+[url "https://"]
+	insteadOf = git://
+[push]
+	default = simple
+	autoSetupRemote = true
+[http]
+	proxy =
+[core]
+	# editor = /usr/local/bin/vim //不使用vim當預設編輯器，改VSCode Insiders
+	editor = code-insiders --wait
+	pager = delta
+	autocrlf = input
+	ignorecase = false
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	light = false
+	line-numbers = true
+	show-syntax-themes = true
+	file-style = blue bold
+	file-decoration-style = blue bold
+	hunk-header-decoration-style = blue bold box
+	hunk-header-file-style = blue bold
+	hunk-header-line-number-style = blue bold
+[diff]
+	colorMoved = default
+	tool = vscode
+[difftool "vscode"]
+  cmd = code-insiders --wait --diff $LOCAL $REMOTE
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[fetch]
+	prune = true
+[merge]
+	conflictstyle=diff3
+[commit]
+	gpgsign = false
+[user]
+	email = hens.virtuella.varld@gmail.com
+	name = Regan Ya
