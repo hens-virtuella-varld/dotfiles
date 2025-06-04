@@ -21,12 +21,15 @@
 	autoSetupRemote = true
 [http]
 	proxy =
+	postBuffer = 524288000
+	maxRequestBuffer = 100M
 [core]
 	# editor = /usr/local/bin/vim //不使用vim當預設編輯器，改VSCode Insiders
 	editor = code-insiders --wait
 	pager = delta
 	autocrlf = input
 	ignorecase = false
+	compression = 9
 [interactive]
 	diffFilter = delta --color-only
 [delta]
